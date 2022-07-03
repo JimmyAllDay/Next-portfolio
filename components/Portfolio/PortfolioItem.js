@@ -3,13 +3,11 @@ import Image from "next/image";
 export default function PortfolioItem({ image, link }) {
   return (
     <>
-      <a href={link} className="portfolio__item">
+      <a href={link}>
         <Image
           src={image}
           alt=""
-          className="portfolio__img"
-          width="300"
-          height="150"
+          className="overflow-hidden transition hover:scale-120"
         />
       </a>
     </>

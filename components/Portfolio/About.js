@@ -3,14 +3,13 @@ const jamesPic2 = require("../../public/images/James_Marshall2.jpg");
 
 function About() {
   return (
-    <div className="p-5 my-5 about-me" id="about">
-      <h2 className="section__title section__title--about">About me</h2>
-      <p className="section__subtitle section__subtitle--about">
-        Developer based in Melbourne, Australia
-      </p>
-
-      <div className="about-me__body">
-        <p>
+    <div className="text-dark p-6">
+      <div className="relative">
+        <h2 className="sm:text-5xl text-4xl mb-1 px-2">About me</h2>
+        <p className="bg-accent text-xl font-secondary p-2 sm:pr-[260px] mb-1">
+          Javascript Developer based in Melbourne, Australia
+        </p>
+        <p className="mb-2 px-2 sm:pr-[250px]">
           Innately curious with a passion for learning and problem solving, I
           have spent my professional life working to improve society as an
           officer of the Australian Public Service. As I look to transition into
@@ -21,16 +20,10 @@ function About() {
           to help individuals but to contribute to better societies and, even if
           only incrementally, a better world.
         </p>
+        <div className="sm:w-[210px] max-w-[350px] ml-auto pl-2 sm:absolute sm:mr-5 about-pic">
+          <Image src={jamesPic2} alt="" />
+        </div>
       </div>
-
-      <Image
-        priority
-        src={jamesPic2}
-        className="inline-block h-16 w-12"
-        height={200}
-        width={144}
-        alt=""
-      />
     </div>
   );
 }

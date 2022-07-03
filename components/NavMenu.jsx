@@ -5,7 +5,7 @@ export default function NavMenu({ closeNav, navLinks }) {
     return (
       <li
         key={i}
-        className="nav__item"
+        className="nav__item text-6xl hover:text-accent"
         onClick={() => {
           closeNav();
         }}
@@ -18,8 +18,10 @@ export default function NavMenu({ closeNav, navLinks }) {
   });
 
   return (
-    <>
-      <ul className="nav__list">{mappedLinks}</ul>
-    </>
+    <div className="h-full bg-dark text-light flex flex-col">
+      <ul className="nav__list h-full text-center my-auto justify-evenly flex flex-col">
+        {mappedLinks}
+      </ul>
+    </div>
   );
 }

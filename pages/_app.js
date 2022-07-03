@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 import Layout from "../components/Layout";
 
+import { Spin as Hamburger } from "hamburger-react";
+
 import renderLinks, {
   homeLinks,
   resLinks,
@@ -17,6 +19,7 @@ import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   const [showNav, setShowNav] = useState(false);
+  const [active, setActive] = useState(false);
   const path = useRouter().route;
 
   const showNavMenu = () => {
@@ -30,8 +33,19 @@ export default function MyApp({ Component, pageProps }) {
   return (
     console.log(path),
     (
-      <>
-        <Navbar showNavMenu={showNavMenu} showNav={showNav} />
+      <div className="flex flex-col">
+        <div className="flex flex-row-reverse mb-2">
+          <div className="ml-auto mt-1 mr-3 border rounded bg-light fixed z-[1000]">
+            <Hamburger
+              toggled={active}
+              toggle={setActive}
+              onToggle={(toggled) => showNavMenu()}
+            />
+          </div>
+          <div className="mr-auto">
+            <Navbar showNavMenu={showNavMenu} showNav={showNav} />
+          </div>
+        </div>
         {
           <CSSTransition
             in={showNav}
@@ -45,7 +59,7 @@ export default function MyApp({ Component, pageProps }) {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </>
+      </div>
     )
   );
 }
