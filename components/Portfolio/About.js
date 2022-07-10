@@ -3,7 +3,7 @@ const jamesPic2 = require("../../public/images/James_Marshall2.jpg");
 
 function About() {
   return (
-    <div className="text-dark p-6">
+    <div className="text-dark p-5 max-w-5xl mx-auto" id="about">
       <div className="relative">
         <h2 className="sm:text-5xl text-4xl mb-1 px-2">About me</h2>
         <p className="bg-accent text-xl font-secondary p-2 sm:pr-[260px] mb-1">
@@ -20,7 +20,7 @@ function About() {
           to help individuals but to contribute to better societies and, even if
           only incrementally, a better world.
         </p>
-        <div className="sm:w-[210px] max-w-[350px] ml-auto pl-2 sm:absolute sm:mr-5 about-pic">
+        <div className="sm:w-[210px] max-w-[350px] pl-2 sm:absolute about-pic">
           <Image src={jamesPic2} alt="" />
         </div>
       </div>

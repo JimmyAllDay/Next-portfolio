@@ -19,7 +19,7 @@ import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   const [showNav, setShowNav] = useState(false);
-  const [active, setActive] = useState(false);
+
   const path = useRouter().route;
 
   const showNavMenu = () => {
@@ -31,35 +31,42 @@ export default function MyApp({ Component, pageProps }) {
   };
 
   return (
-    console.log(path),
-    (
-      <div className="flex flex-col">
-        <div className="flex flex-row-reverse mb-2">
-          <div className="ml-auto mt-1 mr-3 border rounded bg-light fixed z-[1000]">
-            <Hamburger
-              toggled={active}
-              toggle={setActive}
-              onToggle={(toggled) => showNavMenu()}
-            />
-          </div>
-          <div className="mr-auto">
-            <Navbar showNavMenu={showNavMenu} showNav={showNav} />
-          </div>
+    <div className="flex flex-col">
+      <div className="flex flex-row-reverse mb-2">
+        <div
+          className={`ml-auto mt-1 mr-3 border rounded fixed z-[1000] ${
+            showNav
+              ? "text-hamburger border-none"
+              : "text-dark border-none bg-light bg-opacity-70"
+          }`}
+        >
+          <Hamburger
+            toggled={showNav}
+            toggle={setShowNav}
+            onToggle={(toggled) => showNavMenu()}
+          />
         </div>
-        {
-          <CSSTransition
-            in={showNav}
-            timeout={300}
-            classNames="nav"
-            unmountOnExit
-          >
-            <NavMenu closeNav={closeNav} navLinks={renderLinks(path)} />
-          </CSSTransition>
-        }
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <div className="mr-auto">
+          <Navbar showNavMenu={showNavMenu} showNav={showNav} />
+        </div>
       </div>
-    )
+      {
+        <CSSTransition
+          in={showNav}
+          timeout={300}
+          classNames="nav"
+          unmountOnExit
+        >
+          <NavMenu
+            closeNav={closeNav}
+            navLinks={renderLinks(path)}
+            showNavMenu={showNavMenu}
+          />
+        </CSSTransition>
+      }
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   );
 }

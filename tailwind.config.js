@@ -36,6 +36,7 @@ module.exports = {
       accent: "#85b685",
       accentd: "#689c68",
       nav: "#9c9c9c",
+      hamburger: "#D3D3D3",
     },
     extend: {
       dropShadow: {

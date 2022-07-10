@@ -35,7 +35,11 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="">
-        {path === "/" ? <HomeHero name={name} /> : <AltHero name={name} />}
+        {path === "/" || path === "/resume" ? (
+          <HomeHero name={name} />
+        ) : (
+          <AltHero name={name} />
+        )}
       </header>
       <main>{children}</main>
       {path !== "/" && path !== "/resume" && path !== "/posts/posts-main" && (
