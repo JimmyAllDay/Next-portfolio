@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 import Layout from "../components/Layout";
+import Footer from "../components/Footer";
 
 import { Spin as Hamburger } from "hamburger-react";
 
@@ -32,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row-reverse mb-2">
+      <div className="flex flex-row-reverse mb-2 bg-blog">
         <div
           className={`ml-auto mt-1 mr-3 border rounded fixed z-[1000] ${
             showNav
@@ -67,6 +68,7 @@ export default function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Footer />
     </div>
   );
 }

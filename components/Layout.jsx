@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 import Navbar from "./Navbar";
 import HomeHero from "./HomeHero";
+import MainHero from "./MainHero";
 import AltHero from "./AltHero";
 import { useState } from "react";
 
@@ -34,9 +35,9 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="">
+      <header>
         {path === "/" || path === "/resume" ? (
-          <HomeHero name={name} />
+          <MainHero name={name} />
         ) : (
           <AltHero name={name} />
         )}

@@ -2,10 +2,10 @@ export default function TechEd() {
   return (
     <div className="mt-5">
       <div
-        className="bg-accent inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
+        className="inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="techTrain"
       >
-        <h3 className="text-4xl text-light">Tech Training</h3>
+        <h3 className="text-2xl font-secondary text-accent">Tech Training</h3>
       </div>
       <div className="px-5 py-2">
         <table className="w-full">

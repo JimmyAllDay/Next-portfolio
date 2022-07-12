@@ -6,10 +6,10 @@ export default function TechSkills() {
   return (
     <div className="mt-5">
       <div
-        className="bg-accent inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
+        className="bg-blend-soft-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="techSkills"
       >
-        <h3 className="text-4xl text-light">Tech Skills</h3>
+        <h3 className="text-2xl text-accent font-secondary">Tech Skills</h3>
       </div>
 
       <div className="px-5 text-dark">

@@ -1,8 +1,8 @@
 export default function WorkExp() {
   return (
     <div className="mt-5">
-      <div className="bg-accent inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]">
-        <h3 className="text-4xl text-light">Work Experience</h3>
+      <div className="bg-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]">
+        <h3 className="text-2xl text-accent font-secondary">Work Experience</h3>
       </div>
       <div className="px-5 py-2" id="workExp">
         <table className="w-full">

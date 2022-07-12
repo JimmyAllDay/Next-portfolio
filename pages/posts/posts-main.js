@@ -18,15 +18,15 @@ export async function getStaticProps() {
 
 export default function Main({ allPostsData }) {
   return (
-    <>
+    <div className="bg-blog sm:p-5 p-2">
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <h2>Writing</h2>
+      <section className="bg-light p-2">
+        <h2 className="text-xl font-secondary mb-2 text-accent">Posts</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+            <li key={id} className="inline-block p-3 rounded bg-blog">
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
@@ -38,6 +38,6 @@ export default function Main({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }
