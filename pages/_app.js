@@ -1,11 +1,9 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
-
-import { Spin as Hamburger } from "hamburger-react";
+import Navbar from "../components/Navbar";
 
 import renderLinks, {
   homeLinks,
@@ -14,14 +12,14 @@ import renderLinks, {
 } from "../components/utils/portfolioUtils";
 
 import { CSSTransition } from "react-transition-group";
-import "../styles/CssTransitions.css";
 
+import "../styles/CssTransitions.css";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
-  const [showNav, setShowNav] = useState(false);
-
   const path = useRouter().route;
+
+  const [showNav, setShowNav] = useState(false);
 
   const showNavMenu = () => {
     setShowNav(!showNav);
@@ -33,24 +31,11 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row-reverse mb-2 bg-blog">
-        <div
-          className={`ml-auto mt-1 mr-3 border rounded fixed z-[1000] ${
-            showNav
-              ? "text-hamburger border-none"
-              : "text-dark border-none bg-light bg-opacity-70"
-          }`}
-        >
-          <Hamburger
-            toggled={showNav}
-            toggle={setShowNav}
-            onToggle={(toggled) => showNavMenu()}
-          />
-        </div>
-        <div className="mr-auto">
-          <Navbar showNavMenu={showNavMenu} showNav={showNav} />
-        </div>
-      </div>
+      <Navbar
+        showNav={showNav}
+        setShowNav={setShowNav}
+        showNavMenu={showNavMenu}
+      />
       {
         <CSSTransition
           in={showNav}
@@ -59,6 +44,7 @@ export default function MyApp({ Component, pageProps }) {
           unmountOnExit
         >
           <NavMenu
+            showNav={showNav}
             closeNav={closeNav}
             navLinks={renderLinks(path)}
             showNavMenu={showNavMenu}

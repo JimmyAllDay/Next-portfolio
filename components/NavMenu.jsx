@@ -5,7 +5,7 @@ export default function NavMenu({ closeNav, navLinks }) {
     return (
       <li
         key={i}
-        className="nav__item text-6xl hover:text-accent"
+        className="nav__item sm:text-6xl text-5xl hover:text-accent"
         onClick={() => {
           closeNav();
         }}

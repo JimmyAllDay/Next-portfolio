@@ -44,9 +44,9 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       {path !== "/" && path !== "/resume" && path !== "/posts/posts-main" && (
-        <div>
+        <div className="p-5 max-w-4xl mx-auto">
           <Link href="/posts/posts-main">
-            <a>← Back to Main</a>
+            <a className="text-accent hover:underline">← Back to Main</a>
           </Link>
         </div>
       )}

@@ -4,7 +4,7 @@ import profilePic from "../public/images/James_Marshall1.jpg";
 
 export default function HomeHero({ name }) {
   return (
-    <div className="flex sm:py-[100px] py-5">
+    <div className="flex py-5" id="home">
       <div className="flex sm:flex-row-reverse flex-col px-5 w-full max-w-3xl mx-auto">
         <div className="inline-block">
           <div className="h-[200px] w-[200px] overflow-hidden rounded-full mx-auto">
@@ -16,8 +16,8 @@ export default function HomeHero({ name }) {
           <h1 className="text-2xl font-secondary text-center sm:text-left">
             Javascript Developer
           </h1>
-          <div class="relative flex pt-1 pb-2 items-center">
-            <div class="border-t w-full"></div>
+          <div className="relative flex pt-1 pb-2 items-center">
+            <div className="border-t w-full"></div>
           </div>
 
           <p className="text-center font-secondary sm:text-left sm:w-full">

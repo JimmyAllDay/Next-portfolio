@@ -44,7 +44,7 @@ export const resLinks = [
   { href: "#referees", section: "Referees" },
 ];
 
-export const postsLinks = [{ href: "#overview", section: "Overview" }];
+export const postsLinks = [{ href: "#posts", section: "Posts" }];
 
 export default function renderLinks(path) {
   switch (path) {
