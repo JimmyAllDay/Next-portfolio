@@ -7,6 +7,7 @@ import { siteTitle } from "../../components/Layout";
 import { getSortedPostsData } from "../../lib/posts";
 
 import Date from "../../components/Date";
+// import Card from "../../components/Card";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -19,11 +20,13 @@ export async function getStaticProps() {
 
 function Card({ title, date, id, image, synopsis, hashTags }) {
   const renderHashTags = hashTags.map((tag) => {
-    return (
-      <span className="inline-block bg-nav rounded-full px-1 py-[0.25em] text-sm font-semibold text-dark mr-1 mb-1">
-        {`#${tag}`}
-      </span>
-    );
+    return;
+    <div
+      key={`card-${id}`}
+      className="inline-block bg-nav rounded-full px-1 py-[0.25em] text-sm font-semibold text-dark mr-1 mb-1"
+    >
+      {`#${tag}`}
+    </div>;
   });
 
   return (
@@ -43,7 +46,7 @@ function Card({ title, date, id, image, synopsis, hashTags }) {
               <small className="text-gray">
                 <Date dateString={date} />
               </small>
-              <p class="text-gray">{`${synopsis}..`}</p>
+              <p className="text-gray">{`${synopsis}..`}</p>
               <div className="pt-1 pb-2">{renderHashTags}</div>
             </div>
           </div>
