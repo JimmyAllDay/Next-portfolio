@@ -31,19 +31,19 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto text-dark" id="top">
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className="flex flex-col">
-        <h1 className="text-3xl mx-auto">{postData.title}</h1>
+      <article className="flex flex-col mt-5">
+        <h1 className="text-6xl font-bold mx-auto">{postData.title}</h1>
         <div className="text-sm mx-auto">
-          <p>
+          <p className="my-1">
             <Date dateString={postData.date} />
           </p>
         </div>
-        <div className="max-w-xl mx-auto">
-          <Image src={postData.imagePath} alt="" width="400px" height="250px" />
+        <div className="mx-auto">
+          <Image src={postData.imagePath} alt="" width="800px" height="500px" />
         </div>
         <div
           className="p-5"

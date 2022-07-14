@@ -46,6 +46,11 @@ export const resLinks = [
 
 export const postsLinks = [{ href: "#posts", section: "Posts" }];
 
+export const articleLinks = [
+  { href: "#top", section: "Top" },
+  { href: "/posts/posts-main", section: "Back to Main" },
+];
+
 export default function renderLinks(path) {
   switch (path) {
     case "/":
@@ -55,6 +60,6 @@ export default function renderLinks(path) {
     case "/posts/posts-main":
       return postsLinks;
     default:
-      return homeLinks;
+      return articleLinks;
   }
 }

@@ -5,9 +5,9 @@ import React, { closeElement } from "react";
 import { useRouter } from "next/router";
 
 import Navbar from "./Navbar";
-import HomeHero from "./HomeHero";
 import MainHero from "./MainHero";
 import AltHero from "./AltHero";
+import PostHeader from "./PostHeader";
 import { useState } from "react";
 
 const name = "James Marshall";
@@ -17,6 +17,19 @@ export default function Layout({ children }) {
   const [showNav, setShowNav] = useState(false);
   const router = useRouter();
   const path = router.pathname;
+
+  function renderHeader() {
+    switch (path) {
+      case "/posts/posts-main":
+        return <AltHero name={name} />;
+      case "/":
+        return <MainHero name={name} />;
+      case "/resume":
+        return <MainHero name={name} />;
+      default:
+        return <PostHeader name={name} />;
+    }
+  }
 
   return (
     <div>
@@ -35,13 +48,7 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        {path === "/" || path === "/resume" ? (
-          <MainHero name={name} />
-        ) : (
-          <AltHero name={name} />
-        )}
-      </header>
+      <header>{renderHeader()}</header>
       <main>{children}</main>
       {path !== "/" && path !== "/resume" && path !== "/posts/posts-main" && (
         <div className="p-5 max-w-4xl mx-auto">

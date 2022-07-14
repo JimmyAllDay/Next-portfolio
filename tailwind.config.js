@@ -36,10 +36,11 @@ module.exports = {
       accent: "#85b685",
       accentd: "#689c68",
       nav: "#9c9c9c",
-      gray: "#857683",
+      gray: "#696969",
       hamburger: "#D3D3D3",
       blog: "#f2f2f7",
       blogd: "#cfcfd8",
+      hash: "#DCDCDC",
     },
     extend: {
       dropShadow: {

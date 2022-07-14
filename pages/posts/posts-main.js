@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { siteTitle } from "../../components/Layout";
 
 import { getSortedPostsData } from "../../lib/posts";
 
 import Date from "../../components/Date";
-// import Card from "../../components/Card";
+import Card from "../../components/Card";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -16,44 +16,6 @@ export async function getStaticProps() {
       allPostsData,
     },
   };
-}
-
-function Card({ title, date, id, image, synopsis, hashTags }) {
-  const renderHashTags = hashTags.map((tag) => {
-    return;
-    <div
-      key={`card-${id}`}
-      className="inline-block bg-nav rounded-full px-1 py-[0.25em] text-sm font-semibold text-dark mr-1 mb-1"
-    >
-      {`#${tag}`}
-    </div>;
-  });
-
-  return (
-    <li className="inline-block shadow-lg hover:bg-blog max-w-[300px] mb-3">
-      <Link href={`/posts/${id}`}>
-        <a>
-          <div className="rounded overflow-hidden text-dark">
-            <Image
-              priority
-              src={image}
-              alt="Sunset in the mountains"
-              width="500px"
-              height="250px"
-            />
-            <div className="p-2">
-              <div className="font-bold text-xl text-gray">{title}</div>
-              <small className="text-gray">
-                <Date dateString={date} />
-              </small>
-              <p className="text-gray">{`${synopsis}..`}</p>
-              <div className="pt-1 pb-2">{renderHashTags}</div>
-            </div>
-          </div>
-        </a>
-      </Link>
-    </li>
-  );
 }
 
 export default function Main({ allPostsData }) {

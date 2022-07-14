@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import profilePic from "../public/images/James_Marshall1.jpg";
 
+//!Note: this hero component is not currently in use because it contains different styling to the current site style - it has been left here for reference purposes.
+
 export default function HomeHero({ name }) {
   return (
     <div className="p-5 max-w-5xl mx-auto" id="home">
