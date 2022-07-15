@@ -60,10 +60,12 @@ export default function TechSkills() {
             className="mr-3 sm:mr-5 text-5xl"
           />
         </div>
-        <p className="mt-2 flex">
+        <p className="mt-2">
           My portfolio, demonstrating my use of these skills, is&nbsp;
           <Link href="https://jimmyallday.github.io/react-portfolio/">
-            <span className="text-accent hover:cursor-pointer">here</span>
+            <span className="border text-accent hover:cursor-pointer">
+              here
+            </span>
           </Link>
           .
         </p>

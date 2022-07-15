@@ -35,6 +35,11 @@ export default function HomeHero({ name }) {
                 github.com/JimmyAllDay
               </p>
             </Link>
+            <Link href="https://jamesdev.com.au">
+              <p className="text-accent hover:underline hover:cursor-pointer hidden print:inline-flex">
+                jamesdev.com.au
+              </p>
+            </Link>
           </div>
         </div>
       </div>

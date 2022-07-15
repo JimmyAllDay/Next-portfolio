@@ -15,7 +15,7 @@ export default function Card({ title, date, id, image, synopsis, hashTags }) {
   });
 
   return (
-    <li className="inline-block shadow-lg duration-300 transform hover:scale-105 max-w-[300px] mb-3">
+    <li className="inline-block shadow-lg duration-300 transform hover:scale-105 max-w-[300px] mb-3 sm:mr-auto">
       <Link href={`/posts/${id}`}>
         <a>
           <div className="rounded overflow-hidden text-dark">

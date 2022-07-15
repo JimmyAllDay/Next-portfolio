@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-// import Image from "next/image";
 
 import { siteTitle } from "../../components/Layout";
 
@@ -28,7 +27,7 @@ export default function Main({ allPostsData }) {
         <h2 className="text-xl font-secondary mb-2 text-accent" id="posts">
           Posts
         </h2>
-        <ul className="grid grid-cols-fluid">
+        <ul className="grid grid-cols-fluid justify-items-center sm:justify-items-start">
           {allPostsData.map(
             ({ id, date, title, imagePath, synopsis, hashTags }) => (
               <Card

@@ -1,7 +1,31 @@
-import NavLink from "./NavLink";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { Spin as Hamburger } from "hamburger-react";
 
 export default function Navbar({ showNav, setShowNav, showNavMenu }) {
+  const router = useRouter();
+  const pages = [
+    { name: "Portfolio", path: "/" },
+    { name: "Resume", path: "/resume" },
+    { name: "Writing", path: "/posts/posts-main" },
+  ];
+
+  const mapLinks = pages.map((page, index) => {
+    return (
+      <Link key={index} href={page.path}>
+        <a
+          className={`lg:inline-flex lg:w-auto w-full px-2 py-1 rounded items-center justify-center  ${
+            router.pathname === page.path
+              ? "text-dark"
+              : "text-gray hover:text-dark hover:bg-light"
+          }`}
+        >
+          {page.name}
+        </a>
+      </Link>
+    );
+  });
+
   return (
     <div className="flex flex-row-reverse mb-2 bg-blog print:hidden">
       <div
@@ -21,9 +45,7 @@ export default function Navbar({ showNav, setShowNav, showNavMenu }) {
         <nav className="flex items-center flex-wrap mb-1 text-lg">
           <div className="inline-flex flex-grow">
             <div className="flex flex-row pt-1 items-start sm:pl-5">
-              <NavLink href={"/"} name="Portfolio" prefetch />
-              <NavLink href={"/resume"} name="Resume" prefetch />
-              <NavLink href={"/posts/posts-main"} name="Writing" prefetch />
+              {mapLinks}
             </div>
           </div>
         </nav>
