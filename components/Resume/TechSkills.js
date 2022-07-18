@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export default function TechSkills() {
   return (
-    <div className="mt-5">
+    <div className="mt-5 max-w-5xl mx-auto">
       <div
         className="bg-blend-soft-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="techSkills"

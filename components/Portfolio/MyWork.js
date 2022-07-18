@@ -20,7 +20,9 @@ function MyWork() {
       <p className="text-accent text-2xl mx-auto mb-5">
         A selection of my project work:
       </p>
-      <div className="grid grid-cols-fluid">{mappedItems}</div>
+      <div className="grid grid-cols-fluid max-w-5xl mx-auto">
+        {mappedItems}
+      </div>
     </div>
   );
 }

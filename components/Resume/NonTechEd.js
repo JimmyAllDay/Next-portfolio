@@ -1,6 +1,6 @@
 export default function NonTechEd() {
   return (
-    <div className="mt-5">
+    <div className="mt-5 max-w-5xl mx-auto">
       <div
         className="bg-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="nonTechEd"

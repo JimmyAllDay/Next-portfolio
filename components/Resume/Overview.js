@@ -1,6 +1,6 @@
 export default function Overview() {
   return (
-    <div className="">
+    <div className="max-w-5xl mx-auto">
       <div
         className="inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="overview"
