@@ -1,16 +1,19 @@
 export default function WorkExp() {
   return (
-    <div className="mt-5 max-w-5xl mx-auto">
-      <div className="bg-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]">
-        <h3 className="text-2xl text-accent font-secondary">Work Experience</h3>
+    <div className="mt-5 max-w-5xl mx-auto print:max-w-7xl">
+      <div
+        className="inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
+        id="workExp"
+      >
+        <h3 className="text-2xl font-secondary text-accent">Work Experience</h3>
       </div>
-      <div className="px-5 py-2" id="workExp">
-        <table className="w-full">
+      <div className="px-5 py-2">
+        <table className="table-fixed">
           <thead className="mb-2">
             <tr>
-              <th className="text-left">Organisation</th>
-              <th className="text-left">Date</th>
-              <th className="text-left">Position</th>
+              <th className="text-left align-top w-1/3">Organisation</th>
+              <th className="text-left align-top">Date</th>
+              <th className="text-left align-top">Position</th>
             </tr>
           </thead>
           <tbody>

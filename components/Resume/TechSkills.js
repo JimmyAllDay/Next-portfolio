@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export default function TechSkills() {
   return (
-    <div className="mt-5 max-w-5xl mx-auto">
+    <div className="mt-5 max-w-5xl mx-auto print:max-w-7xl">
       <div
         className="bg-blend-soft-light inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="techSkills"
@@ -62,9 +62,14 @@ export default function TechSkills() {
         </div>
         <p className="mt-2">
           My portfolio, demonstrating my use of these skills, is&nbsp;
-          <Link href="https://jimmyallday.github.io/react-portfolio/">
-            <span className="border text-accent hover:cursor-pointer">
-              here
+          <Link href="https://jamesdev.com.au">
+            <span className=" text-accent hover:cursor-pointer">
+              <a
+                href="https://jamesdev.com.au"
+                className="print:inline-block disabled"
+              >
+                here
+              </a>
             </span>
           </Link>
           .

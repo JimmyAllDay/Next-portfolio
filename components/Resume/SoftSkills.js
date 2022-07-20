@@ -1,6 +1,6 @@
 export default function SoftSkills() {
   return (
-    <div className="mt-5 max-w-5xl mx-auto">
+    <div className="mt-5 max-w-5xl mx-auto print:max-w-7xl">
       <div
         className="bg-blend-lighten inline-flex pl-5 pr-2 pt-[0.1em] pb-[0.25em]"
         id="softSkills"
