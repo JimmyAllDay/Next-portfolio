@@ -3,8 +3,13 @@ import portfolioItem2 from "../../public/images/meditation-timer.png";
 import portfolioItem3 from "../../public/images/askr.png";
 import portfolioItem4 from "../../public/images/crypto-comet.png";
 import portfolioItem5 from "../../public/images/image-api.png";
+import portfolioItem6 from "../../public/images/the-next-state.png";
 
 export const portfolioItemsArr = [
+  {
+    link: "https://the-next-state.vercel.app/",
+    image: portfolioItem6,
+  },
   {
     link: "https://jimmyallday-image-api.herokuapp.com/",
     image: portfolioItem5,

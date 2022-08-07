@@ -1,16 +1,28 @@
 import PortfolioItem from "./PortfolioItem";
+import UnderDevelopmentItem from "./UnderDevelopmentItem";
 
 import { portfolioItemsArr } from "./../utils/portfolioUtils";
 
 const mappedItems = portfolioItemsArr.map((item, index) => {
-  return (
-    <PortfolioItem
-      key={index}
-      image={item.image}
-      link={item.link}
-      className="mx-auto"
-    />
-  );
+  if (index === 0) {
+    return (
+      <UnderDevelopmentItem
+        key={index}
+        image={item.image}
+        link={item.link}
+        className="mx-auto"
+      />
+    );
+  } else {
+    return (
+      <PortfolioItem
+        key={index}
+        image={item.image}
+        link={item.link}
+        className="mx-auto"
+      />
+    );
+  }
 });
 
 function MyWork() {

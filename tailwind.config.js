@@ -41,6 +41,7 @@ module.exports = {
       blog: "#f2f2f7",
       blogd: "#cfcfd8",
       hash: "#DCDCDC",
+      red: "red",
     },
     extend: {
       dropShadow: {
@@ -54,6 +55,7 @@ module.exports = {
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(300px, 1fr))",
       },
+      display: ["group-hover"],
     },
   },
   plugins: [],
