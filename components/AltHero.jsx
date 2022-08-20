@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import profilePic from "../public/images/James_Marshall1.jpg";
+import Image from 'next/image';
+import Link from 'next/link';
+import profilePic from '../public/images/James_Marshall1.jpg';
 
 export default function HomeHero({ name }) {
   return (
@@ -22,9 +22,9 @@ export default function HomeHero({ name }) {
 
           <div className="text-center sm:text-left">
             <p className="pb-3 text-center sm:text-left">
-              I'm a web developer interested in the convergence of technology,
-              entrepreneurship, altruism, spirituality and culture. Currently
-              based in Fitzroy, Melbourne, Australia.
+              I&apos;m a web developer interested in the convergence of
+              technology, entrepreneurship, altruism, spirituality and culture.
+              Currently based in Fitzroy, Melbourne, Australia.
             </p>
 
             <div className="text-center sm:text-left">

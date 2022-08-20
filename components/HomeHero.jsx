@@ -1,15 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-import profilePic from "../public/images/James_Marshall1.jpg";
+import Image from 'next/image';
+import Link from 'next/link';
+import profilePic from '../public/images/James_Marshall1.jpg';
 
-//!Note: this hero component is not currently in use because it contains different styling to the current site style - it has been left here for reference purposes.
+//!Note: this hero component is not currently in use because it contains different styling to the current site style - it has been left here for reference.
 
 export default function HomeHero({ name }) {
   return (
     <div className="p-5 max-w-5xl mx-auto" id="home">
       <div className="relative flex">
         <div className="mx-auto sm:w-full">
-          <h1 className="sm:ml-[290px] text-5xl sm:text-6xl">Hi, I'm</h1>
+          <h1 className="sm:ml-[290px] text-5xl sm:text-6xl">Hi, I&apos;m</h1>
           <h1 className="sm:ml-[290px] text-5xl sm:text-7xl font-bold mb-1">
             {name}
           </h1>

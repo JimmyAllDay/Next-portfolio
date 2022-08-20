@@ -1,30 +1,36 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import React, { closeElement } from "react";
-import { useRouter } from "next/router";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { closeElement } from 'react';
+import { useRouter } from 'next/router';
 
-import Navbar from "./Navbar";
-import MainHero from "./MainHero";
-import AltHero from "./AltHero";
-import PostHeader from "./PostHeader";
-import { useState } from "react";
+import Navbar from './Navbar';
+import MainHero from './MainHero';
+import AltHero from './AltHero';
+import PostHeader from './PostHeader';
+import { useState, useEffect } from 'react';
 
-const name = "James Marshall";
-export const siteTitle = "James Marshall Dev";
+import { hotjar } from 'react-hotjar';
+
+const name = 'James Marshall';
+export const siteTitle = 'James Marshall Dev';
 
 export default function Layout({ children }) {
   const [showNav, setShowNav] = useState(false);
   const router = useRouter();
   const path = router.pathname;
 
+  useEffect(() => {
+    hotjar.initialize(3116659, 6);
+  }, []);
+
   function renderHeader() {
     switch (path) {
-      case "/posts/posts-main":
+      case '/posts/posts-main':
         return <AltHero name={name} />;
-      case "/":
+      case '/':
         return <MainHero name={name} />;
-      case "/resume":
+      case '/resume':
         return <MainHero name={name} />;
       default:
         return <PostHeader name={name} />;
@@ -50,7 +56,7 @@ export default function Layout({ children }) {
       </Head>
       <header>{renderHeader()}</header>
       <main>{children}</main>
-      {path !== "/" && path !== "/resume" && path !== "/posts/posts-main" && (
+      {path !== '/' && path !== '/resume' && path !== '/posts/posts-main' && (
         <div className="p-5 max-w-4xl mx-auto">
           <Link href="/posts/posts-main">
             <a className="text-accent hover:underline">← Back to Main</a>
