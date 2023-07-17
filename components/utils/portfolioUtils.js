@@ -4,8 +4,14 @@ import portfolioItem3 from '../../public/images/askr.png';
 import portfolioItem4 from '../../public/images/crypto-comet.png';
 import portfolioItem5 from '../../public/images/image-api.png';
 import portfolioItem6 from '../../public/images/auth0_todo.png';
+import portfolioItem7 from '../../public/images/protocol.png';
 
 export const portfolioItemsArr = [
+  {
+    link: 'https://protocol-platform.vercel.app/',
+    image: portfolioItem7,
+  },
+
   {
     link: 'https://auth0-todo-app-psi.vercel.app/',
     image: portfolioItem6,
