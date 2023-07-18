@@ -21,7 +21,7 @@ export default function Layout({ children }) {
   const path = router.pathname;
 
   useEffect(() => {
-    hotjar.initialize(3116659, 6);
+    hotjar.initialize(3577761, 6);
   }, []);
 
   function renderHeader() {

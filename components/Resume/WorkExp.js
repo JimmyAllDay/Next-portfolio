@@ -18,8 +18,17 @@ export default function WorkExp() {
           </thead>
           <tbody>
             <tr>
+              <td className="pr-2 pb-1 align-top">
+                Aged Care Quality and Safety Commission
+              </td>
+              <td className="pr-2 pb-1 align-top">October 2022 - Current</td>
+              <td className="pr-2 pb-1 align-top">
+                Assessment Support Officer
+              </td>
+            </tr>
+            <tr>
               <td className="pr-2 pb-1 align-top">IBAC</td>
-              <td className="pr-2 pb-1 align-top">March 2022 - Current</td>
+              <td className="pr-2 pb-1 align-top">March 2022 - October 2022</td>
               <td className="pr-2 pb-1 align-top">
                 Assessment and Review Officer
               </td>

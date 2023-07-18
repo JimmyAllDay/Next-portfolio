@@ -10,17 +10,17 @@ export default function Overview() {
       <div className="px-5 py-2">
         <p>
           I am currently transitioning to a career in web development.
-          Prospective employers will see from my{" "}
+          Prospective employers will see from my{' '}
           <a
             href="https://github.com/JimmyAllDay?tab=repositories"
             className="hover:cursor-pointer text-accent"
           >
             GitHub
-          </a>{" "}
+          </a>{' '}
           repository that I have foundational Javascript programming skills,
           including in the use of vanilla Javascript, HTML, CSS, Sass,
-          Bootstrap, Tailwind, React, Node, Next, Jest and React Testing
-          Library. In May of 2021, I completed a{" "}
+          Bootstrap, Tailwind, React, Node, Next.js, Jest and React Testing
+          Library. In May of 2021, I completed a{' '}
           <i>Front End Developer Nano-Degree</i> certificate through Udacity. In
           November 2021, I completed a further nano-degree certificate in React,
           which included training in Redux. <br /> <br />I am attracted to roles

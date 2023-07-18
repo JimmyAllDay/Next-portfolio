@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Icon } from "@iconify/react";
+import { Icon } from '@iconify/react';
 
 export default function TechSkills() {
   return (
@@ -17,22 +17,22 @@ export default function TechSkills() {
         <div className="flex flex-wrap p-1 place-content-start space-y-2">
           <Icon
             icon="mdi:language-html5"
-            style={{ color: "#e34f26" }}
+            style={{ color: '#e34f26' }}
             className="mr-3 sm:mr-5 text-[3.5rem] mt-1"
           />
           <Icon
             icon="ion:logo-css3"
-            style={{ color: "#2965f1" }}
+            style={{ color: '#2965f1' }}
             className="mr-3 sm:mr-5 text-5xl"
           />
           <Icon
             icon="fontisto:sass"
-            style={{ color: "#CD6D93" }}
+            style={{ color: '#CD6D93' }}
             className="mr-3 sm:mr-5 text-4xl"
           />
           <Icon
             icon="akar-icons:bootstrap-fill"
-            style={{ color: "#563d7c" }}
+            style={{ color: '#563d7c' }}
             className="mr-3 sm:mr-5 text-5xl"
           />
           <Icon
@@ -41,20 +41,20 @@ export default function TechSkills() {
           />
           <Icon
             icon="ion:logo-javascript"
-            style={{ color: "#f0db4f" }}
+            style={{ color: '#f0db4f' }}
             className="mr-3 sm:mr-5 text-5xl"
           />
           <Icon
             icon="akar-icons:node-fill"
-            style={{ color: "#3c873a" }}
+            style={{ color: '#3c873a' }}
             className="mr-3 sm:mr-5 text-5xl"
           />
           <Icon
             icon="akar-icons:react-fill"
-            style={{ color: "#61DBFB" }}
+            style={{ color: '#61DBFB' }}
             className="mr-3 sm:mr-5 text-5xl"
           />
-          <Icon icon="logos:nextjs" className="mr-3 sm:mr-5 text-5xl" />
+          <Icon icon="cib:next-js" className="mr-3 sm:mr-5 text-5xl" />
           <Icon
             icon="vscode-icons:file-type-jest"
             className="mr-3 sm:mr-5 text-5xl"
