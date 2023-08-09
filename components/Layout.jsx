@@ -4,11 +4,12 @@ import Link from 'next/link';
 import React, { closeElement } from 'react';
 import { useRouter } from 'next/router';
 
-import Navbar from './Navbar';
+import DarkModeToggle from './darkmodeToggle/DarkmodeToggle';
 import MainHero from './MainHero';
 import AltHero from './AltHero';
 import PostHeader from './PostHeader';
 import { useState, useEffect } from 'react';
+import { ThemeProvider } from '../context/ThemeContext';
 
 import { hotjar } from 'react-hotjar';
 
@@ -54,8 +55,11 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <DarkModeToggle />
       <header>{renderHeader()}</header>
+
       <main>{children}</main>
+
       {path !== '/' && path !== '/resume' && path !== '/posts/posts-main' && (
         <div className="p-5 max-w-4xl mx-auto">
           <Link href="/posts/posts-main">

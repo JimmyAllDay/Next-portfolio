@@ -1,0 +1,42 @@
+.container {
+  position: fixed;
+  right: 28px;
+}
+
+.switchContainer {
+  margin-left: auto;
+  width: 18px;
+  height: 34px;
+  border: 1.5px solid rgb(242 242 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  background-color: #272727;
+}
+
+.icon {
+  font-size: 7px;
+  height: 15px;
+}
+
+.ball {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(242 242 247);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.up {
+  top: 2px;
+}
+
+.down {
+  bottom: 2px;
+}

@@ -1,13 +1,12 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Spin as Hamburger } from "hamburger-react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Spin as Hamburger } from 'hamburger-react';
 
 export default function Navbar({ showNav, setShowNav, showNavMenu }) {
   const router = useRouter();
   const pages = [
-    { name: "Portfolio", path: "/" },
-    { name: "Resume", path: "/resume" },
-    { name: "Writing", path: "/posts/posts-main" },
+    { name: 'Portfolio', path: '/' },
+    { name: 'Writing', path: '/posts/posts-main' },
   ];
 
   const mapLinks = pages.map((page, index) => {
@@ -16,8 +15,8 @@ export default function Navbar({ showNav, setShowNav, showNavMenu }) {
         <a
           className={`lg:inline-flex lg:w-auto w-full px-2 py-1 rounded items-center justify-center  ${
             router.pathname === page.path
-              ? "text-dark"
-              : "text-gray hover:text-dark hover:bg-light"
+              ? 'text-dark'
+              : 'text-gray hover:text-dark hover:bg-light'
           }`}
         >
           {page.name}
@@ -31,8 +30,8 @@ export default function Navbar({ showNav, setShowNav, showNavMenu }) {
       <div
         className={`ml-auto mt-1 mr-3 border rounded fixed z-[1000] ${
           showNav
-            ? "text-hamburger border-none"
-            : "text-dark border-none bg-light bg-opacity-70"
+            ? 'text-hamburger border-none'
+            : 'text-dark border-none bg-light bg-opacity-70'
         }`}
       >
         <Hamburger

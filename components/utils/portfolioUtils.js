@@ -32,10 +32,6 @@ export const portfolioItemsArr = [
     link: 'https://jimmyallday.github.io/meditation-timer/',
     image: portfolioItem2,
   },
-  {
-    link: 'https://jimmyallday.github.io/book-shelf/',
-    image: portfolioItem1,
-  },
 ];
 
 export const homeLinks = [

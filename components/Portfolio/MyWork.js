@@ -1,7 +1,7 @@
-import PortfolioItem from "./PortfolioItem";
-import UnderDevelopmentItem from "./UnderDevelopmentItem";
+import PortfolioItem from './PortfolioItem';
+import UnderDevelopmentItem from './UnderDevelopmentItem';
 
-import { portfolioItemsArr } from "./../utils/portfolioUtils";
+import { portfolioItemsArr } from '../utils/portfolioUtils';
 
 const mappedItems = portfolioItemsArr.map((item, index) => {
   if (index === 0) {

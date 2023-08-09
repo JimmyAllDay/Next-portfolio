@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import profilePic from "../public/images/James_Marshall1.jpg";
+import Image from 'next/image';
+import Link from 'next/link';
+import profilePic from '../public/images/James_Marshall1.jpg';
 
 export default function HomeHero({ name }) {
   return (
@@ -27,32 +27,12 @@ export default function HomeHero({ name }) {
           <div className="text-center sm:text-left">
             <Link href="mailto:jameswhmarshall@gmail.com">
               <p className="text-accent hover:underline hover:cursor-pointer">
-                <a
-                  href="mailto:jameswhmarshall@gmail.com"
-                  className="print:inline-block disabled"
-                >
-                  jameswhmarshall@gmail.com
-                </a>
+                jameswhmarshall@gmail.com
               </p>
             </Link>
             <Link href="https://github.com/JimmyAllDay">
               <p className="text-accent hover:underline hover:cursor-pointer">
-                <a
-                  href="https://github.com/JimmyAllDay"
-                  className="print:inline-block disabled"
-                >
-                  github.com/JimmyAllDay
-                </a>
-              </p>
-            </Link>
-            <Link href="https://jamesdev.com.au">
-              <p className="text-accent hover:underline hover:cursor-pointer hidden print:inline-flex">
-                <a
-                  href="https://jamesdev.com.au"
-                  className="print:inline-block disabled"
-                >
-                  jamesdev.com.au
-                </a>
+                github.com/JimmyAllDay
               </p>
             </Link>
           </div>
