@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 
-import { siteTitle } from "../../components/Layout";
+import { siteTitle } from '../../components/Layout';
 
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedPostsData } from '../../lib/posts';
 
-import Date from "../../components/Date";
-import Card from "../../components/Card";
+import Date from '../../components/Date';
+import Card from '../../components/Card';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -27,7 +27,7 @@ export default function Main({ allPostsData }) {
         <h2 className="text-xl font-secondary mb-2 text-accent" id="posts">
           Posts
         </h2>
-        <ul className="grid grid-cols-fluid justify-items-center sm:justify-items-start">
+        <ul className="grid grid-cols-fluid justify-items-center sm:justify-items-start ">
           {allPostsData.map(
             ({ id, date, title, imagePath, synopsis, hashTags }) => (
               <Card

@@ -31,20 +31,19 @@ module.exports = {
       5: '32px',
       6: '48px',
     },
-    colors: {
-      light: '#fff',
-      dark: '#303030',
-      accent: '#85b685',
-      accentd: '#689c68',
-      nav: '#9c9c9c',
-      gray: '#696969',
-      hamburger: '#D3D3D3',
-      blog: '#f2f2f7',
-      blogd: '#cfcfd8',
-      hash: '#DCDCDC',
-      red: 'red',
-    },
     extend: {
+      colors: {
+        light: '#fff',
+        dark: '#292B34',
+        accent: '#85b685',
+        accentd: '#689c68',
+        nav: '#9c9c9c',
+        gray: '#696969',
+        hamburger: '#D3D3D3',
+        blog: '#f2f2f7',
+        blogd: '#cfcfd8',
+        hash: '#DCDCDC',
+      },
       dropShadow: {
         '3xl': '10px 10px 10px rgba(0, 0, 0, 0.4)',
         '4xl': [

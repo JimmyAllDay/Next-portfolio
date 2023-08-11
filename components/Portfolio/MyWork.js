@@ -27,12 +27,13 @@ const mappedItems = portfolioItemsArr.map((item, index) => {
 
 function MyWork() {
   return (
-    <div className="p-5 bg-dark mt-6 text-center" id="work">
+    <div className="p-5 bg-dark mt-6 text-center dark:bg-inherit" id="work">
       <h2 className="text-6xl text-light mx-auto mb-3">Portfolio Projects</h2>
       <p className="text-accent text-2xl mx-auto mb-5">
         A selection of my project work:
       </p>
-      <div className="grid grid-cols-fluid max-w-5xl mx-auto">
+
+      <div className="grid grid-cols-fluid max-w-5xl mx-auto m-5">
         {mappedItems}
       </div>
     </div>

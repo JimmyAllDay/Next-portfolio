@@ -13,10 +13,10 @@ export default function Navbar({ showNav, setShowNav, showNavMenu }) {
     return (
       <Link key={index} href={page.path}>
         <a
-          className={`lg:inline-flex lg:w-auto w-full px-2 py-1 rounded items-center justify-center  ${
+          className={`lg:inline-flex lg:w-auto w-full px-2 py-1 rounded items-center justify-center ${
             router.pathname === page.path
-              ? 'text-dark'
-              : 'text-gray hover:text-dark hover:bg-light'
+              ? 'text-dark dark:text-accent'
+              : 'text-gray hover:text-dark hover:bg-light dark:hover:text-accentd dark:text-accent dark:hover:bg-stone-700'
           }`}
         >
           {page.name}
@@ -26,7 +26,7 @@ export default function Navbar({ showNav, setShowNav, showNavMenu }) {
   });
 
   return (
-    <div className="flex flex-row-reverse mb-2 bg-blog print:hidden">
+    <div className="flex flex-row-reverse mb-2 bg-blog print:hidden dark:bg-stone-800">
       <div
         className={`ml-auto mt-1 mr-3 border rounded fixed z-[1000] ${
           showNav

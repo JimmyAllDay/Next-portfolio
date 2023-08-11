@@ -57,7 +57,7 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div className="bg-light dark:bg-dark dark:text-light transition ease-in-out duration-700">
+    <div className="bg-light dark:bg-slate-800 dark:text-light transitionall duration-700">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
