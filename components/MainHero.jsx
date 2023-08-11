@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from '../public/images/James_Marshall1.jpg';
 
-export default function HomeHero({ name }) {
+export default function MainHero({ name }) {
   return (
     <div className="flex py-5" id="home">
       <div className="flex sm:flex-row-reverse flex-col px-5 w-full max-w-3xl mx-auto">

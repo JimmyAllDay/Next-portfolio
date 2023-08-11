@@ -1,15 +1,17 @@
-import Image from "next/image";
-const jamesPic2 = require("../../public/images/James_Marshall2.jpg");
+import Image from 'next/image';
+const jamesPic2 = require('../../public/images/James_Marshall2.jpg');
 
 function About() {
   return (
     <div className="text-dark p-5 max-w-4xl mx-auto" id="about">
       <div className="relative flex flex-col">
-        <h2 className="sm:text-5xl text-4xl mb-1 px-2 sm:ml-auto">About me</h2>
-        <p className="bg-light text-accent text-xl font-secondary p-2 sm:pl-[250px] sm:text-right border-t border-dark">
+        <h2 className="sm:text-5xl text-4xl mb-1 px-2 sm:ml-auto dark:text-light">
+          About me
+        </h2>
+        <p className="bg-light text-accent text-xl font-secondary p-2 sm:pl-[250px] sm:text-right border-t bg-opacity-0 border-dark dark:border-light">
           Javascript Developer based in Melbourne, Australia
         </p>
-        <div className="sm:pl-[250px] sm:text-right px-2">
+        <div className="sm:pl-[250px] sm:text-right px-2 dark:text-light">
           <p>
             Innately curious with a passion for learning and problem solving, I
             have spent my professional life working to improve society as an

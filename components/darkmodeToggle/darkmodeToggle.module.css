@@ -1,6 +1,7 @@
 .container {
   position: fixed;
   right: 28px;
+  z-index: 50;
 }
 
 .switchContainer {

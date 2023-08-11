@@ -1,15 +1,24 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { closeElement } from 'react';
+import React, { closeElement, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import NavMenu from '../components/NavMenu';
 
 import DarkModeToggle from './darkmodeToggle/DarkmodeToggle';
 import MainHero from './MainHero';
 import AltHero from './AltHero';
 import PostHeader from './PostHeader';
-import { useState, useEffect } from 'react';
-import { ThemeProvider } from '../context/ThemeContext';
+
+import { CSSTransition } from 'react-transition-group';
+
+import renderLinks, {
+  homeLinks,
+  resLinks,
+  postsLinks,
+} from '../components/utils/portfolioUtils';
 
 import { hotjar } from 'react-hotjar';
 
@@ -17,9 +26,18 @@ const name = 'James Marshall';
 export const siteTitle = 'James Marshall Dev';
 
 export default function Layout({ children }) {
-  const [showNav, setShowNav] = useState(false);
   const router = useRouter();
   const path = router.pathname;
+
+  const [showNav, setShowNav] = useState(false);
+
+  const showNavMenu = () => {
+    setShowNav(!showNav);
+  };
+
+  const closeNav = () => {
+    setShowNav(false);
+  };
 
   useEffect(() => {
     hotjar.initialize(3577761, 6);
@@ -39,7 +57,7 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div>
+    <div className="bg-light dark:bg-dark dark:text-light transition ease-in-out duration-700">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -55,18 +73,41 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Navbar
+        showNav={showNav}
+        setShowNav={setShowNav}
+        showNavMenu={showNavMenu}
+      />
       <DarkModeToggle />
       <header>{renderHeader()}</header>
+      {
+        <CSSTransition
+          in={showNav}
+          timeout={300}
+          classNames="nav"
+          unmountOnExit
+        >
+          <div className="dark:bg-dark">
+            <NavMenu
+              showNav={showNav}
+              closeNav={closeNav}
+              navLinks={renderLinks(path)}
+              showNavMenu={showNavMenu}
+            />
+          </div>
+        </CSSTransition>
+      }
 
       <main>{children}</main>
 
-      {path !== '/' && path !== '/resume' && path !== '/posts/posts-main' && (
+      {path !== '/' && path !== '/posts/posts-main' && (
         <div className="p-5 max-w-4xl mx-auto">
           <Link href="/posts/posts-main">
             <a className="text-accent hover:underline">← Back to Main</a>
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
