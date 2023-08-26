@@ -5,11 +5,16 @@ import portfolioItem4 from '../../public/images/crypto-comet.png';
 import portfolioItem5 from '../../public/images/image-api.png';
 import portfolioItem6 from '../../public/images/auth0_todo.png';
 import portfolioItem7 from '../../public/images/protocol.png';
+import portfolioItem8 from '../../public/images/all-day.png';
 
 export const portfolioItemsArr = [
   {
     link: 'https://protocol-platform.vercel.app/',
     image: portfolioItem7,
+  },
+  {
+    link: 'https://all-day-company-site.vercel.app/',
+    image: portfolioItem8,
   },
 
   {
