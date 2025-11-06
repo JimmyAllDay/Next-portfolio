@@ -6,17 +6,20 @@ import portfolioItem5 from '../../public/images/image-api.png';
 import portfolioItem6 from '../../public/images/auth0_todo.png';
 import portfolioItem7 from '../../public/images/protocol.png';
 import portfolioItem8 from '../../public/images/all-day.png';
+import portfolioItem9 from '../../public/images/plain_language_studio.png';
 
 export const portfolioItemsArr = [
   {
     link: 'https://protocol-platform.vercel.app/',
     image: portfolioItem7,
   },
+  {link: 'https://jimmyallday.github.io/plain-language-studio/', 
+    image: portfolioItem9,
+  },
   {
     link: 'https://all-day-company-site.vercel.app/',
     image: portfolioItem8,
   },
-
   {
     link: 'https://auth0-todo-app-psi.vercel.app/',
     image: portfolioItem6,
