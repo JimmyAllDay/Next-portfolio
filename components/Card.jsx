@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Date from "./Date";
+import Date from "@/components/Date";
 
 export default function Card({ title, date, id, image, synopsis, hashTags }) {
   const renderHashTags = hashTags.map((tag, i) => {

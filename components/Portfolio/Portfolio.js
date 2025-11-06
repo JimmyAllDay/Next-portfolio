@@ -1,8 +1,8 @@
 import { useState } from "react";
-import NavMenu from "../NavMenu";
+import NavMenu from "@/components/NavMenu";
 //! import Services from "./Services"; - not currently in use - consider re-instating when appropriate
-import About from "./About";
-import MyWork from "./MyWork";
+import About from "@/components/Portfolio/About";
+import MyWork from "@/components/Portfolio/MyWork";
 
 import { CSSTransition } from "react-transition-group";
 

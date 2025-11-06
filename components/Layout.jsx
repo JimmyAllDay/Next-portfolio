@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { closeElement, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import NavMenu from '../components/NavMenu';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import NavMenu from '@/components/NavMenu';
 
-import DarkModeToggle from './darkmodeToggle/DarkmodeToggle';
-import MainHero from './MainHero';
-import AltHero from './AltHero';
-import PostHeader from './PostHeader';
+import DarkModeToggle from '@/components/darkmodeToggle/DarkmodeToggle';
+import MainHero from '@/components/MainHero';
+import AltHero from '@/components/AltHero';
+import PostHeader from '@/components/PostHeader';
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -18,7 +18,7 @@ import renderLinks, {
   homeLinks,
   resLinks,
   postsLinks,
-} from '../components/utils/portfolioUtils';
+} from '@/components/utils/portfolioUtils';
 
 import { hotjar } from 'react-hotjar';
 

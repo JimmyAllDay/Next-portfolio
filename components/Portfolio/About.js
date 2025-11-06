@@ -1,5 +1,4 @@
 import Image from 'next/image';
-const jamesPic2 = require('../../public/images/James_Marshall2.jpg');
 
 function About() {
   return (
@@ -25,7 +24,7 @@ function About() {
           </p>
         </div>
         <div className="sm:w-[210px] max-w-[350px] pl-2 sm:absolute about-pic">
-          <Image src={jamesPic2} alt="" />
+          <Image src="/images/James_Marshall2.jpg" alt="" width={210} height={280} />
         </div>
       </div>
     </div>

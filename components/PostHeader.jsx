@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import profilePic from "../public/images/James_Marshall1.jpg";
 
 export default function PostHeader({ name }) {
   return (
@@ -9,7 +8,7 @@ export default function PostHeader({ name }) {
         <div className="flex mx-auto">
           <div className="inline-block">
             <div className="h-[75px] w-[75px] overflow-hidden rounded-full">
-              <Image priority src={profilePic} alt={name} />
+              <Image priority src="/images/James_Marshall1.jpg" alt={name} width={75} height={75} />
             </div>
           </div>
           <h1 className="text-4xl text-dark font-bold my-auto ml-3">{name}</h1>

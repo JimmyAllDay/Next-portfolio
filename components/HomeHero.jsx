@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import profilePic from '../public/images/James_Marshall1.jpg';
 
 //!Note: this hero component is not currently in use because it contains different styling to the current site style - it has been left here for reference.
 
@@ -14,7 +13,7 @@ export default function HomeHero({ name }) {
             {name}
           </h1>
           <div className="hero-pic sm:w-[260px] max-w-[400px] drop-shadow-3xl">
-            <Image priority src={profilePic} alt={name} />
+            <Image priority src="/images/James_Marshall1.jpg" alt={name} width={400} height={500} layout="responsive" />
           </div>
 
           <div className="bg-accent py-2 sm:max-w-full sm:pl-[290px] max-w-[400px]">
