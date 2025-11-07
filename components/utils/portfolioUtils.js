@@ -25,11 +25,11 @@ export const portfolioItemsArr = [
     image: portfolioItem6,
   },
   {
-    link: 'https://jimmyallday-image-api.herokuapp.com/',
+    link: 'https://jimmyallday.github.io/image-processing-api-with-client/',
     image: portfolioItem5,
   },
   {
-    link: 'https://crypto-comet.herokuapp.com/',
+    link: 'https://jimmyallday.github.io/crypto-comet/',
     image: portfolioItem4,
   },
   {
@@ -45,7 +45,7 @@ export const portfolioItemsArr = [
 export const homeLinks = [
   { href: '#home', section: 'Home' },
   { href: '#work', section: 'Portfolio Projects' },
-  //! { href: "#services", section: "What I do" }, - 'services' omitted at current - can reinstate
+  //? { href: "#services", section: "What I do" }, - 'services' omitted at current - can reinstate
   { href: '#about', section: 'About Me' },
 ];
 
